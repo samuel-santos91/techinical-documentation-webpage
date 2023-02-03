@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Technical Documentation</title>
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <header>JS Documentation</header>
+      <ul id="sidebar-grid">
+        <a href="#introduction" class="nav-link"><li>Introduction</li></a>
+        <a href="#javascript_and_java" class="nav-link"
+          ><li>Javascript and Java</li></a
+        >
+        <a href="#variables" class="nav-link"><li>Variables</li></a>
+        <a href="#constants" class="nav-link"><li>Constants</li></a>
+        <a href="#function_declaration" class="nav-link"
+          ><li>Function Declaration</li></a
+        >
+        <a href="#reference" class="nav-link"><li>Reference</li></a>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header id="#"><h1>Introduction</h1></header>
+        <p>
+          JavaScript is a cross-platform, object-oriented scripting language. It
+          is a small and lightweight language. Inside a host environment (for
+          example, a web browser), JavaScript can be connected to the objects of
+          its environment to provide programmatic control over them.
+        </p>
+        <p>
+          JavaScript contains a standard library of objects, such as Array,
+          Date, and Math, and a core set of language elements such as operators,
+          control structures, and statements. Core JavaScript can be extended
+          for a variety of purposes by supplementing it with additional objects;
+          for example:
+        </p>
+        <ul>
+          <li>
+            Client-side JavaScript extends the core language by supplying
+            objects to control a browser and its Document Object Model (DOM).
+            For example, client-side extensions allow an application to place
+            elements on an HTML form and respond to user events such as mouse
+            clicks, form input, and page navigation.<br /><br />
+          </li>
+          <li>
+            Server-side JavaScript extends the core language by supplying
+            objects relevant to running JavaScript on a server. For example,
+            server-side extensions allow an application to communicate with a
+            database, provide continuity of information from one invocation to
+            another of the application, or perform file manipulations on a
+            server.
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="javascript_and_java">
+        <header id="#"><h1>Javascript and Java</h1></header>
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally
+          different in some others. The JavaScript language resembles Java but
+          does not have Java's static typing and strong type checking.
+          JavaScript follows most Java expression syntax, naming conventions and
+          basic control-flow constructs which was the reason why it was renamed
+          from LiveScript to JavaScript.
+        </p>
+        <p>
+          In contrast to Java's compile-time system of classes built by
+          declarations, JavaScript supports a runtime system based on a small
+          number of data types representing numeric, Boolean, and string values.
+          JavaScript has a prototype-based object model instead of the more
+          common class-based object model. The prototype-based model provides
+          dynamic inheritance; that is, what is inherited can vary for
+          individual objects. JavaScript also supports functions without any
+          special declarative requirements. Functions can be properties of
+          objects, executing as loosely typed methods.
+        </p>
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not
+          have to declare all variables, classes, and methods. You do not have
+          to be concerned with whether methods are public, private, or
+          protected, and you do not have to implement interfaces. Variables,
+          parameters, and function return types are not explicitly typed.
+        </p>
+      </section>
+      <section class="main-section" id="variables">
+        <header id="#"><h1>Variables</h1></header>
+        <p>
+          You use variables as symbolic names for values in your application.
+          The names of variables, called identifiers, conform to certain rules.
+        </p>
+        <p>
+          A JavaScript identifier must start with a letter, underscore (_), or
+          dollar sign ($); subsequent characters can also be digits (0-9).
+          Because JavaScript is case sensitive, letters include the characters
+          "A" through "Z" (uppercase) and the characters "a" through "z"
+          (lowercase).
+        </p>
+        <p>
+          You can use ISO 8859-1 or Unicode letters such as å and ü in
+          identifiers. You can also use the Unicode escape sequences as
+          characters in identifiers. Some examples of legal names are
+          Number_hits, temp99, and _name.
+        </p>
+      </section>
+      <section class="main-section" id="constants">
+        <header id="#"><h1>Constants</h1></header>
+        <p>
+          You can create a read-only, named constant with the const keyword. The
+          syntax of a constant identifier is the same as for a variable
+          identifier: it must start with a letter, underscore or dollar sign and
+          can contain alphabetic, numeric, or underscore characters.
+        </p>
+        <div><code>const PI = 3.14;</code></div>
+        <p>
+          A constant cannot change value through assignment or be re-declared
+          while the script is running. It has to be initialized to a value.<br /><br />The
+          scope rules for constants are the same as those for let block scope
+          variables. If the const keyword is omitted, the identifier is assumed
+          to represent a variable.<br /><br />You cannot declare a constant with
+          the same name as a function or variable in the same scope. For
+          example:
+        </p>
+        <div>
+          <code
+            >// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
+            WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
+            //statements }</code
+          >
+        </div>
+        <p>
+          However, object attributes are not protected, so the following
+          statement is executed without problems.
+        </p>
+        <div>
+          <code
+            >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+            "otherValue";</code
+          >
+        </div>
+      </section>
+      <section class="main-section" id="function_declaration">
+        <header id="#"><h1>Function Declaration</h1></header>
+        <p>
+          A function definition (also called a function declaration, or function
+          statement) consists of the function keyword, followed by:
+        </p>
+        <ul>
+          <li>The name of the function.<br /><br /></li>
+          <li>
+            A list of arguments to the function, enclosed in parentheses and
+            separated by commas.<br /><br />
+          </li>
+          <li>
+            The JavaScript statements that define the function, enclosed in
+            curly brackets, { }.
+          </li>
+        </ul>
+        <p>
+          For example, the following code defines a simple function named
+          square:
+        </p>
+        <div>
+          <code>function square(number) { return number * number; }</code>
+        </div>
+        <p>
+          The function square takes one argument, called number. The function
+          consists of one statement that says to return the argument of the
+          function (that is, number) multiplied by itself. The return statement
+          specifies the value returned by the function.
+        </p>
+        <div><code>return number * number;</code></div>
+        <p>
+          Primitive parameters (such as a number) are passed to functions by
+          value; the value is passed to the function, but if the function
+          changes the value of the parameter, this change is not reflected
+          globally or in the calling function.
+        </p>
+      </section>
+      <section class="main-section" id="reference">
+        <header id="#"><h1>Reference</h1></header>
+        <p>
+          For more information visit the
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank"
+            >link</a
+          >
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

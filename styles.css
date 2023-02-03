@@ -1,0 +1,130 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(40, 40, 40);
+  font-weight: 300;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: white;
+  border-right: 1px solid rgb(40, 40, 40);
+}
+
+#nav-bar header {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 2rem;
+}
+
+#sidebar-grid {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar-grid li {
+  border-top: 1px solid rgb(40, 40, 40);
+  padding: 2rem 0 2rem 3.5rem;
+}
+
+.nav-link {
+  color: rgb(40, 40, 40);
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 300;
+  display: block;
+}
+
+.nav-link:hover {
+  animation-name: glow;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes glow {
+  0% {
+    border: 1px solid rgb(40, 40, 40);
+    border-top: 0;
+    box-shadow: 1px 1px 5px black;
+    background-color: white;
+    transform: scale(1.05);
+  }
+  100% {
+    border: 1px solid rgb(40, 40, 40);
+    border-top: 0;
+    box-shadow: 1px 5px 5px black;
+    background-color: white;
+    transform: scale(1.1);
+  }
+}
+
+main {
+  margin: 0 4rem 4rem 23rem;
+}
+
+div {
+    background-color: rgb(246, 245, 245);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-left: 0.7rem;
+}
+
+h1 {
+    margin-left: -1.5rem;
+}
+
+@media (max-width: 48rem) {
+  body {
+    font-size: 0.7rem;
+  }
+
+  #nav-bar {
+    width: 8rem;
+  }
+
+  #nav-bar header {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  #sidebar-grid li {
+    padding: 1rem 0 1rem 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  main {
+    margin: 0 0.3rem 2rem 9rem;
+  }
+
+  div {
+    margin-left: 0.5rem;
+  }
+
+  h1 {
+    margin-left: -0.8rem;
+}
+
+  @keyframes glow {
+    0% {
+      border: 1px solid rgb(40, 40, 40);
+      border-top: 0;
+      box-shadow: 1px 1px 3px black;
+      background-color: white;
+      transform: scale(1.02);
+    }
+    100% {
+      border: 1px solid rgb(40, 40, 40);
+      border-top: 0;
+      box-shadow: 1px 1px 3px black;
+      background-color: white;
+      transform: scale(1.04);
+    }
+  }
+}
